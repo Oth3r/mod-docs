@@ -73,7 +73,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}directionhud/
     needs: [ build, test ]
     runs-on: ubuntu-latest
     permissions:
@@ -95,7 +95,7 @@ jobs:
       - name: Package and upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './directionhud'
+          path: dir
 
       - name: Deploy to GitHub Pages
         id: deployment
